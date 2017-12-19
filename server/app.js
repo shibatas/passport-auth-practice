@@ -20,7 +20,7 @@ var app = express();
 
 
 // *** mongoose *** //
-mongoose.connect('mongodb://localhost/passport-social-auth');
+mongoose.connect('mongodb://test:test@ds161316.mlab.com:61316/test_database');
 
 
 // *** view engine *** //
@@ -46,7 +46,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 // *** main routes *** //
 app.use('/', routes);
